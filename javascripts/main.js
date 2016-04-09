@@ -1,5 +1,7 @@
 $(function(){
 
+  var scroll = null;
+
   var matrix = ['Wake up, Neo...^2000','The Matrix has you ...^2000','Follow the white rabbit...^1000','Knock, knock, Neo... ^3000', 'Hi.'];
 
   function run(content, cad, type, skills) {
@@ -33,13 +35,17 @@ $(function(){
       run('#about-title-typed', 'About', 'text').then(function (){
 
         var about = `My name is Jean Reynoso, I have 20 years and live in Lima, I'm a <b>programmer</b> 
-               who has over 3 years of experience in software development. I started when I was very
+               who has over 4 years of experience in software development. I started when I was very
                young to develop apps in Visual FoxPro, expanding my knowledge to all the other web
                system and achieving eventually more elaborated structures. I am currently working at
                <a href="http://www.wundermanphantasia.pe/">Wunderman Phantasia</a>
                as a Full stack developer.`;
 
         run('#about-content-typed', about, 'html').then(function (){
+
+          scroll =window.setInterval(function() {
+            window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+          }, 100);
 
           run('#skills-title-typed', 'Skills', 'text').then(function (){
 
@@ -58,6 +64,8 @@ $(function(){
             run('#skills-content-typed', skills, 'html', 'hideCursor').then(function (){
 
               run('#bye-typed', 'Bye^2000.^2000.^2000.', 'text').then(function (){
+
+                clearInterval(scroll);
 
               });
 
