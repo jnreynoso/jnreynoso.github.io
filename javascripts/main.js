@@ -2,14 +2,14 @@ $(function(){
 
   var scroll = null;
 
-  var matrix = ['Wake up, Neo...^2000','The Matrix has you ...^2000','Follow the white rabbit...^1000','Knock, knock, Neo... ^3000', 'Hi.'];
+  var matrix = ['Wake up, Neo...^2000','The Matrix has you ...^2000','Follow the white rabbit...','Knock, knock, Neo... ^4000', 'Hi.'];
 
   function run(content, cad, type, skills) {
     return new Promise(function (resolve, reject) {
       $(content).typed({
         strings: cad == 'Hi.' ? matrix : [cad],
         typeSpeed: 30,
-        startDelay: 2000,
+        startDelay: 800,
         showCursor: skills == undefined ? true : false,
         backDelay: 500,
         loop: false,
