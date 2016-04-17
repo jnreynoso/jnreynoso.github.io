@@ -8,7 +8,7 @@ $(function(){
     return new Promise(function (resolve, reject) {
       $(content).typed({
         strings: cad == 'Hi.' ? matrix : [cad],
-        typeSpeed: 30,
+        typeSpeed: 10,
         startDelay: 800,
         showCursor: skills == undefined ? true : false,
         backDelay: 500,
