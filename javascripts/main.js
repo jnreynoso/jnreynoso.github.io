@@ -2,7 +2,9 @@ $(function(){
 
   var scroll = null;
 
-  var matrix = ['Wake up, Neo...^2000','The Matrix has you ...^2000','Follow the white rabbit...','Knock, knock, Neo... ^4000', 'Hi.'];
+
+  var matrix = ['Hi.'];
+  //var matrix = ['Wake up, Neo...^2000','The Matrix has you ...^2000','Follow the white rabbit...','Knock, knock, Neo... ^4000', 'Hi.'];
 
   function run(content, cad, type, skills) {
     return new Promise(function (resolve, reject) {
