@@ -39,9 +39,7 @@ $(function(){
         var about = `My name is Jean Reynoso, I have 20 years and live in Lima, I'm a <b>programmer</b> 
                who has over 4 years of experience in software development. I started when I was very
                young to develop apps in Visual FoxPro, expanding my knowledge to all the other web
-               system and achieving eventually more elaborated structures. I am currently working at
-               <a href="http://www.wundermanphantasia.pe/">Wunderman Phantasia</a>
-               as a Full stack developer.`;
+               system and achieving eventually more elaborated structures.`;
 
         run('#about-content-typed', about, 'html').then(function (){
 
